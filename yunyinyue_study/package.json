@@ -1,0 +1,7 @@
+{
+  "name": "yunyinyue_study",
+  "version": "1.0.0",
+  "dependencies": {
+    "pubsub-js": "^1.9.3"
+  }
+}

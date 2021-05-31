@@ -1,0 +1,106 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 底座 */
+.circle{
+    position: relative;
+    z-index: 100;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    background: #fff;
+    max-width: 10rpx 0;
+}
+
+/* 摇杆 */
+.needle{
+    position: relative;
+    top: -40rpx;
+    left: 60rpx;
+    width: 192rpx;
+    height: 274rpx;
+    z-index: 99;
+    transform-origin: 40rpx 0;
+    transform: rotate(-20deg);
+    transition: transform 1s;
+    /* 旋转的中心点默认是矩形区域的中心点 */
+    /* border:1rpx solid red; */
+}
+
+.needleRotate{
+    transform: rotate(0deg);
+}
+
+/* 磁盘 */
+.discContainer{
+    position: relative;
+    top:-170rpx;
+    width: 598rpx;
+    height: 598rpx;
+    /* border:1rpx solid red; */
+}
+
+.discAnimation{
+    animation: disc 4s linear infinite;
+    animation-delay: 1s;
+}
+
+/* @keyfra 设置动画帧
+1 from to 简单的动画，只有起始帧和结束帧
+2 百分比 多用于复杂的动画
+*/
+
+@keyframes disc {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.disc{
+    width: 598rpx;
+    height: 598rpx;
+}
+
+.musicImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 370rpx;
+    height: 370rpx;
+    border-radius: 50%;
+}
+
+/* 底部控制区域 */
+.musicControl{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 40rpx;
+    left: 0;
+    border-top: 1rpx solid #fff;
+}
+
+.musicControl text{
+    width: 20%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color:#fff;
+    font-size: 50rpx;
+}
+
+.musicControl .big{
+    font-size: 80rpx;
+}
