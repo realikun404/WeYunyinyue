@@ -70,7 +70,7 @@ async login(){
     //   title:"前端验证通过",
     //   icon:"none"
     // })
-    console.log("aaa");
+    // console.log("aaa");
     let result=await request("/login/cellphone",{"phone":phone,"password":password,isLogin:true});
     if(result.code===200){
       wx.showToast({

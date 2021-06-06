@@ -1,0 +1,134 @@
+/* pages/search/search.wxss */
+.searchContainer{
+    padding: 0 20rpx;
+}
+
+.header{
+    display: flex;
+    position: relative;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 10rpx;
+}
+
+.searchInput{
+    flex: 1;
+    background: rgba(237, 237, 237, 0.3);
+    border-radius: 30rpx;
+    position: relative;
+}
+
+.clear{
+    position: absolute;
+    right: 30rpx;
+    top:0;
+    font-size: 30rpx;
+    z-index: 10;
+}
+
+.cancel{
+    width: 100rpx;
+    text-align: center;
+}
+
+.searchIcon{
+    position: absolute;
+    left: 10rpx;
+}
+
+.searchInput input{
+    margin-left: 50rpx;
+    height: 60rpx;
+}
+
+.placeholder{
+    color: #d43c33;
+}
+
+/* 搜索历史 */
+.history{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    line-height: 50rpx;
+    margin: 30rpx 0;
+    min-height: 20rpx;
+}
+
+.history .title{
+    font-size: 28rpx;
+}
+
+.history .historyItem{
+    height: 50rpx;
+    font-size: 26rpx;
+    background: #ededed;
+    margin:0 10rpx;
+    margin-bottom: 5rpx;
+    padding: 0 30rpx;
+    border-radius: 20rpx;
+}
+
+.history .delete{
+    position: absolute;
+    bottom: 10rpx;
+    right:15rpx;
+    font-size:26rpx ;
+}
+
+/* 热搜榜 */
+.hotContainer{
+    margin-top: 20rpx;
+}
+
+.hotContainer .title{
+    font-size: 28rxp;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.hotList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotItem{
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+}
+
+.hotItem .order{
+    margin: 0 10rpx;
+}
+
+.hotItem .iconImg{
+    width: 35rpx;
+    height: 20rpx;
+    margin-left: 10rpx;
+}
+
+/* 搜索内容 */
+.searchContent{
+    color:#d43c33;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    border-bottom: 1rpx solid #d43c33;
+}
+
+.searchItem{
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+
+.searchItem .content{
+    flex:1;
+    margin-left: 20rpx;
+    border-bottom: 1rpx solid #eee;
+    font-size: 26rpx;
+}
+

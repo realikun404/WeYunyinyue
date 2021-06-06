@@ -7,11 +7,25 @@
         <image class="musicImage" src="{{song.al.picUrl}}"></image>
     </view>
 
+    <!-- 进度条控制区域 -->
+    <view class="progressControl">
+      <text>{{currentTime}}</text>
+      <!-- 总进度条 -->
+        <view class="barControl">
+          <!-- 实时进度条 -->
+          <view class="audio-currentTime-Bar" style="width:{{currentWidth+'rpx'}}">
+              <!-- 小圆球 -->
+            <view class="audio-circle"></view>
+          </view>
+        </view>
+      <text>{{durationTime}}</text>
+    </view>
+
     <!-- 底部控制播放区域 -->
     <view class="musicControl">
         <text class="iconfont icon-shouye-bofangmoshi-shunxubofang"></text>
         <text class="iconfont icon-shangyishou" bindtap="handleSwitch" id="pre"></text>
-        <text class="iconfont {{isPlay?'icon-zantingtingzhi':'icon-bofang'}}" bindtap="handleMusicPlay"></text>
+        <text class="iconfont big {{isPlay?'icon-zantingtingzhi':'icon-bofang'}}" bindtap="handleMusicPlay"></text>
         <text class="iconfont icon-xiayishou" bindtap="handleSwitch" id="next"></text>
         <text class="iconfont icon-bofangliebiao"></text>
     </view>

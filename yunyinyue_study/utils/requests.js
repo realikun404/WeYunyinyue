@@ -31,7 +31,7 @@ export default(url,data={},method="GET")=>{
               cookie:wx.getStorageSync("cookies")?wx.getStorageSync("cookies")[0]+wx.getStorageSync("cookies")[1]+wx.getStorageSync("cookies")[2]+wx.getStorageSync("cookies")[3]:""
             },
             success:(res)=>{
-              //console.log("请求成功:",res);
+              // console.log("请求成功:",res);
               if(data.isLogin){//登录请求
                 //将用户的cookie存入至本地
                 wx.setStorage({

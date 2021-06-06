@@ -51,6 +51,14 @@ Page({
       }else{
         index=(index+length+1)%length;
       }
+
+      //更新下标
+
+      
+      this.setData({
+        index
+      })
+
       let musicId=recommendList[index].id;
       //将musicId传给songDetail 界面
 
@@ -68,6 +76,7 @@ Page({
 
   //跳转到songdetai
   toSongDetail(event) {
+    // console.log(event.currentTarget.dataset);
     let {song,index}=event.currentTarget.dataset;
     this.setData({
       index

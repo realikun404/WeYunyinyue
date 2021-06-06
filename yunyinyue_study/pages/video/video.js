@@ -18,6 +18,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(!wx.getStorageSync("cookies"))
+    {
+      wx.navigateTo({
+        url:"/pages/login/login"
+      })
+    }
     //获取导航数据
     this.getVideoGroupListData();
 
@@ -151,8 +157,15 @@ Page({
     /*
     数据分页：
     1.后端分页。 2.前端分页
-    //没提供API，懒得弄了
+    //懒得弄了
     */
+  },
+
+  //跳转至搜索界面
+  toSearch(){
+    wx.navigateTo({
+      url:"/pages/search/search"
+    })
   },
 
   /**
